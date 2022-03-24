@@ -31,3 +31,9 @@ An Introduction to R - <http://cran.r-project.org/doc/manuals/r-release/R-intro.
 -   Wickham (2014). *Advanced R*, Chapman & Hall/CRC Press
 
 -   More books <https://bookdown.org/>
+
+#### Other Resources
+
+-   Major technical publishers like Springer, Chapman & Hall/CRC have entire series of books dedicated to using R in various applications. For example, Springer has a series of books called *Use R!*
+
+-   A longer list of books can be found on the [CRAN web site](http://www.r-project.org/doc/bib/R-books.html)
