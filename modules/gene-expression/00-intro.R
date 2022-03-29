@@ -213,3 +213,120 @@ x <- c(1, 2, NaN, NA, 4)
 is.na(x)
 
 is.nan(x)
+
+############---------------- DATA FRAME
+#' Data frames are used to store tabular data in R. 
+#' They are an important type of object in R and 
+#' are used in a variety of statistical modeling 
+#' applications. 
+rm(list=ls())
+
+
+############----------------- Names
+#' R objects can have names, which is very useful
+#' for writing readable code and self-describing
+#' objects. Here is an example of assigning names
+#' to an integer vector.
+x <- 1:3
+names(x)
+names(x) <- c("New York", "Seattle", "Los Angeles")
+
+#' Lists can also have names, which is often very useful.
+x <- list("Los Angeles" = 1, Boston = 2, London = 3)
+
+#' Matrices can have both column and row names.
+m <- matrix(1:4, nrow = 2, ncol = 2)
+dimnames(m) <- list(c("a", "b"), c("c", "d"))
+
+#' Column names and row names can be set separately 
+#' using the colnames() and rownames() functions.
+colnames(m) <- c("h", "f")
+rownames(m) <- c("x", "z")
+
+###################
+#'----------------- Subsetting R Objects
+#' There are three operators that can be used to extract
+#' subsets of R objects.
+#' 
+#' The '[' operator always returns an object of the same 
+#' class as the original. It can be used to select multiple 
+#' elements of an object
+#' 
+#' The '[[' operator is used to extract elements of a list or 
+#' a data frame. It can only be used to extract a single 
+#' element and the class of the returned object will not 
+#' necessarily be a list or data frame.
+#' 
+#' The $ operator is used to extract elements of a list or 
+#' data frame by literal name. Its semantics are similar to
+#' that of [[.
+
+#' --------- Subsetting a Vector
+#' Vectors are basic objects in R and they can be subsetted 
+#' using the [ operator.
+#' 
+#' x <- c("a", "b", "c", "c", "d", "a")
+#' 
+#' 
+#' --------- Subsetting a Matrix
+#' 
+#' x <- matrix(1:6, 2, 3)
+#' 
+#' --------- Dropping matrix dimensions
+#' x <- matrix(1:6, 2, 3)
+#' 
+#' 
+#' --------- Subsetting Lists
+#' x <- list(foo = 1:4, bar = 0.6)
+#' 
+#' 
+#' --------- Subsetting Nested Elements of a List
+#' x <- list(a = list(10, 12, 14), b = c(3.14, 2.81))
+#' 
+#' 
+#' --------- Extracting Multiple Elements of a List
+#' x <- list(foo = 1:4, bar = 0.6, baz = "hello")
+#' 
+#' 
+#' 
+#' --------- Using the readr Package
+#' 
+#' 
+#' --------- Binary Formats
+#' 
+#' 
+#' --------- Control Structures
+#' 
+#' --------- Commonly used control structures are
+#' --------- https://bookdown.org/rdpeng/rprogdatascience/control-structures.html
+#' - if and else: testing a condition and acting on it
+#' - for: execute a loop a fixed number of times
+#' - while: execute a loop while a condition is true
+#' - repeat: execute an infinite loop (must break out of it to stop)
+#' - break: break the execution of a loop
+#' - next: skip an interation of a loop
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
