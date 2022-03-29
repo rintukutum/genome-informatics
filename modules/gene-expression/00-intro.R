@@ -142,3 +142,74 @@ idx_demo_eq <- num_demo == 2
 num_demo[idx_demo]
 
 num_demo[idx_demo_eq]
+####
+# Matrices can be created by column-binding or 
+# row-binding with the cbind() and rbind() functions.
+x <- 1:3
+y <- 10:12
+# column-binding
+cbind(x, y)
+# row-binding
+rbind(x, y) 
+
+####-------------- Lists
+# Lists are a special type of vector that can contain
+# elements of different classes. Lists are a very 
+# important data type in R and you should get to know 
+# them well. 
+
+# Lists can be explicitly created using the 
+# list() function, which takes an arbitrary 
+# number of arguments.
+
+x <- list(1, "a", TRUE, 1 + 4i) 
+
+####---------------- Empty list
+# We can also create an empty list of a prespecified 
+# length with the vector() function
+x <- vector("list", length = 5)
+
+####---------------- Factors
+#' Factors are used to represent categorical data 
+#' and can be unordered or ordered. One can think 
+#' of a factor as an integer vector where each integer 
+#' has a label. 
+#' 
+#' Factors are important in statistical 
+#' modeling and are treated specially by 
+#' modelling functions like lm() and glm().
+
+#' Using factors with labels is better than using 
+#' integers because factors are self-describing. 
+#' Having a variable that has values “Male” and 
+#' “Female” is better than a variable that has 
+#' values 1 and 2.
+#' 
+#' Factor objects can be created with the factor() function.
+
+x <- factor(c("yes", "yes", "no", "yes", "no"))
+
+# See the underlying representation of factor
+unclass(x)
+
+####---------------- Missing Values
+#' Missing values are denoted by NA or NaN
+#' 
+#' is.na() is used to test objects if they are NA
+#' 
+#' is.nan() is used to test for NaN
+
+x <- c(1, 2, NA, 10, 3)  
+
+is.na(x)   
+
+is.nan(x)
+
+#' NA values have a class also, so there are integer NA, character NA, etc.
+#' A NaN value is also NA but the converse is not true
+
+x <- c(1, 2, NaN, NA, 4)
+
+is.na(x)
+
+is.nan(x)
