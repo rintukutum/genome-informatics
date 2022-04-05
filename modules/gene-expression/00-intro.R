@@ -8,7 +8,8 @@ rev_vec <- rev(num_vec)
 char_vec <- c("a", "b", "c",4)
 #vector indexing
 plot(num_vec)
- plot(rev_vec)
+plot(rev_vec)
+
 char_vec [1] <- 'b'
 char_vec [2] <- 4
 char_vec [3] <- 'c'
@@ -151,6 +152,9 @@ y <- 10:12
 cbind(x, y)
 # row-binding
 rbind(x, y) 
+x <- 1:2
+
+t.test(x,y)
 
 ####-------------- Lists
 # Lists are a special type of vector that can contain
@@ -163,12 +167,16 @@ rbind(x, y)
 # number of arguments.
 
 x <- list(1, "a", TRUE, 1 + 4i) 
+x
+
 
 ####---------------- Empty list
 # We can also create an empty list of a prespecified 
 # length with the vector() function
 x <- vector("list", length = 5)
-
+x
+x <- list()
+x
 ####---------------- Factors
 #' Factors are used to represent categorical data 
 #' and can be unordered or ordered. One can think 
@@ -188,7 +196,19 @@ x <- vector("list", length = 5)
 #' Factor objects can be created with the factor() function.
 
 x <- factor(c("yes", "yes", "no", "yes", "no"))
-
+x
+x <- factor(c("yes", "yes", "no", "yes", "no"), levels = c('yes', 'no'))
+x
+Ans <- c('Y', 'N')
+Name <- c ( 'AB', 'Biswajit')
+DIF <- cbind(Ans, Name)
+DIF
+list (Ans, Name)
+list(DIF)
+rm(list=ls())
+student <- (list('boy' = LETTERS [1:4], 'girl' = 'V'))
+student
+student[[1]]
 # See the underlying representation of factor
 unclass(x)
 
@@ -199,8 +219,8 @@ unclass(x)
 #' 
 #' is.nan() is used to test for NaN
 
-x <- c(1, 2, NA, 10, 3)  
-
+x <- c(1, 2, NaN, 10, 3)  
+x
 is.na(x)   
 
 is.nan(x)
@@ -228,26 +248,31 @@ rm(list=ls())
 #' objects. Here is an example of assigning names
 #' to an integer vector.
 x <- 1:3
+#x <- c(1,2,3,...,100)
 names(x)
 names(x) <- c("New York", "Seattle", "Los Angeles")
-
+x
+x[1]
 #' Lists can also have names, which is often very useful.
 x <- list("Los Angeles" = 1, Boston = 2, London = 3)
-
+x
 #' Matrices can have both column and row names.
 m <- matrix(1:4, nrow = 2, ncol = 2)
 dimnames(m) <- list(c("a", "b"), c("c", "d"))
-
+m
 #' Column names and row names can be set separately 
 #' using the colnames() and rownames() functions.
 colnames(m) <- c("h", "f")
 rownames(m) <- c("x", "z")
+m
+m
 
 ###################
 #'----------------- Subsetting R Objects
 #' There are three operators that can be used to extract
 #' subsets of R objects.
 #' 
+m[1,1]
 #' The '[' operator always returns an object of the same 
 #' class as the original. It can be used to select multiple 
 #' elements of an object
@@ -290,8 +315,11 @@ rownames(m) <- c("x", "z")
 #' 
 #' 
 #' --------- Using the readr Package
-#' 
-#' 
+install.packages('readr')
+
+library(readr)
+age_data <- read_csv(file = 'data/age.csv')
+#readr::read_csv()
 #' --------- Binary Formats
 #' 
 #' 
@@ -306,8 +334,47 @@ rownames(m) <- c("x", "z")
 #' - break: break the execution of a loop
 #' - next: skip an interation of a loop
 
+# if(<condition>) {
+#   ## do something
+# } 
 
+# if(<condition>) {
+#   ## do something
+# } 
+# else {
+#   ## do something else
+# }
 
+# if(<condition1>) {
+#   ## do something
+# } else if(<condition2>)  {
+#   ## do something different
+# } else {
+#   ## do something different
+# }
+
+## Generate a uniform random number
+x <- runif(1, 0, 10)  
+if(x > 3) {
+  y <- 10
+} else {
+  y <- 0
+}
+
+y <- if(x > 3) {
+  10
+} else { 
+  0
+}
+#--------
+# https://www.routledge.com/Chapman--HallCRC-The-R-Series/book-series/CRCTHERSER
+#------
+# install.packages("BiocManager")
+# R < 4.1.0
+# BiocManager::install(version = '3.11', force = TRUE)
+BiocManager::install("DESeq2", version = '3.11')
+BiocManager::install("locfit", version = '3.11')
+#------
 
 
 
