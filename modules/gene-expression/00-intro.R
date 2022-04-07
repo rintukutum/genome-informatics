@@ -319,7 +319,7 @@ install.packages('readr')
 
 library(readr)
 age_data <- read_csv(file = 'data/age.csv')
-#readr::read_csv()
+# readr::read_csv()
 #' --------- Binary Formats
 #' 
 #' 
@@ -354,26 +354,99 @@ age_data <- read_csv(file = 'data/age.csv')
 # }
 
 ## Generate a uniform random number
-x <- runif(1, 0, 10)  
+set.seed(1929)
+x <- runif(n = 100, min = 0, max = 10)  
 if(x > 3) {
   y <- 10
 } else {
   y <- 0
 }
+# x < 4
+x_4 <- c()
+j <- 1 
+for( i  in 1:length(x) ){
+  if( x[i] < 4 ){
+    x_4[j] <- x[i]
+    j <- j + 1
+  }
+}
+#--------------------------
+# x > 4
+y <- c()
+j <- 1 
+for( i  in 1:length(x) ){
+  if( x[i] > 4 ){
+    y[j] <- x[i]
+    j <- j + 1
+  }
+}
 
+
+x_list <- list()
+for(i in 1:5){
+  if(i  == 1){
+    idx <- x < 2
+    x_list[[i]] <- x[idx]
+  }
+  if(i  == 2){
+    idx <- x >= 2 & x < 4
+    x_list[[i]] <- x[idx]
+  }
+  if(i  == 3){
+    idx <- x >= 4 & x < 6
+    x_list[[i]] <- x[idx]
+  }
+  if(i  == 4){
+    idx <- x >= 6 & x < 8
+    x_list[[i]] <- x[idx]
+  }
+  if(i  == 5){
+    idx <- x >= 8
+    x_list[[i]] <- x[idx]
+  }
+}
+# #############################################
+# homework 
+x_bucket <- list()
+bucket_id <- c()
+# indicator
+ind <- c(2,4,6,8,10)
+
+for(i in 1:length(x)){
+  b.index <- c(FALSE,FALSE,FALSE,FALSE,FALSE)
+  for(j in 1:length(ind)){
+    if(x[i] <= ind[j] & x[i] > ind[j-1]){
+      # homework
+      # FEEL THE MISSING CODE
+    }
+  }
+}
+
+
+
+
+for(i in 1:5){
+  if(i >= 3){
+    print(i)
+  }
+}
+
+i <- 1:5
+i[i>3]
 y <- if(x > 3) {
   10
 } else { 
   0
 }
+
 #--------
 # https://www.routledge.com/Chapman--HallCRC-The-R-Series/book-series/CRCTHERSER
 #------
 # install.packages("BiocManager")
 # R < 4.1.0
 # BiocManager::install(version = '3.11', force = TRUE)
-BiocManager::install("DESeq2", version = '3.11')
-BiocManager::install("locfit", version = '3.11')
+# BiocManager::install("DESeq2", version = '3.11')
+# BiocManager::install("locfit", version = '3.11')
 #------
 
 
