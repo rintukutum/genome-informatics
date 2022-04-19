@@ -315,10 +315,12 @@ m[1,1]
 #' 
 #' 
 #' --------- Using the readr Package
-install.packages('readr')
+#' install.packages('readr')
 
+#' creating a new directory
+dir.create(path = 'data-copy',showWarnings = FALSE)
 library(readr)
-age_data <- read_csv(file = 'data/age.csv')
+age_data <- read_csv(file = './data/age.csv')
 # readr::read_csv()
 #' --------- Binary Formats
 #' 
@@ -337,6 +339,40 @@ age_data <- read_csv(file = 'data/age.csv')
 # if(<condition>) {
 #   ## do something
 # } 
+#age <- c(10,23,6,19)
+
+x.age <- 10
+if (x.age < 18) {
+  print('from high school')
+}else{
+  print('from college')
+}
+set.seed(108)
+age <- sample(x = c(1:80),size = 500,replace = TRUE)
+n_age <- length(age)
+student_info <- c()
+for(i in 1:n_age){
+  cur_age <- age[i]
+  if (cur_age < 18) {
+    print('from high school')
+    student_info[i] <- 'HS'
+  }else{
+    print('from college')
+    student_info[i] <- 'C'
+  }
+}
+
+table(student_info)
+
+barplot(table(student_info))
+
+x.age <- 10
+if ( x.age < 18) {
+  print('from high school')
+}else{
+  print('from college')
+}
+
 
 # if(<condition>) {
 #   ## do something
