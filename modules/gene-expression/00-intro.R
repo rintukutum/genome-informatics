@@ -347,6 +347,7 @@ if (x.age < 18) {
 }else{
   print('from college')
 }
+#------------
 set.seed(108)
 age <- sample(x = c(1:80),size = 500,replace = TRUE)
 n_age <- length(age)
@@ -361,19 +362,17 @@ for(i in 1:n_age){
     student_info[i] <- 'C'
   }
 }
-
-table(student_info)
-
-barplot(table(student_info))
-
-x.age <- 10
-if ( x.age < 18) {
-  print('from high school')
-}else{
-  print('from college')
-}
-
-
+#------------
+# table(student_info)
+# 
+# barplot(table(student_info))
+# 
+# x.age <- 10
+# if ( x.age < 18) {
+#   print('from high school')
+# }else{
+#   print('from college')
+# }
 # if(<condition>) {
 #   ## do something
 # } 
