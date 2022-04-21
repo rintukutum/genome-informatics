@@ -10,7 +10,8 @@
 # library("tximport")
 # library("readr")
 # library("tximportData")
-
+#-------- GTEx 
+# https://gtexportal.org/home/datasets
 gtex_v8_rnaseq_gc <- readLines(
   con = 'data/gtex-rnaseq-gene-count-v8.txt'
 )
