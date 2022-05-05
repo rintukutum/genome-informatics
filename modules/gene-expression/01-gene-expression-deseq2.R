@@ -10,6 +10,7 @@
 # library("tximport")
 # library("readr")
 # library("tximportData")
+#------------------------
 #-------- GTEx 
 # https://gtexportal.org/home/datasets
 gtex_v8_rnaseq_gc <- readLines(
@@ -18,7 +19,7 @@ gtex_v8_rnaseq_gc <- readLines(
 #'--------PROTOTYPE
 #' STRING MANIPULATION
 #' 
-# strsplit(x = 'RINTU', split = 'N')
+# strsplit(x = 'RINTU', split = 'RIN')
 y <- strsplit(
   x = gtex_v8_rnaseq_gc[1],
   split = 'v8'
@@ -78,6 +79,35 @@ gtex_tissue <- c()
 for(i in 1:length(gtex_v8_rnaseq_gc)){
   gtex_tissue[i] <- jaisri(gtex_file = gtex_v8_rnaseq_gc[i])
 }
+gtex_tissue <- gsub(' ','.',gtex_tissue)
+
+#---------
+# date 
+d1 <- strsplit(gtex_v8_rnaseq_gc[1],split = "2017-06-05")
+
+d2 <- strsplit(d1[[1]][2],split = '\\.')
+
+d3 <- strsplit(d2[[1]][1],split = '\\_')
+
+d3[[1]][3:4]
+
+dd <- d3[[1]]
+
+n_dd <- length(dd)
+
+#-----
+if( n_dd == 3){
+  output <- dd[3]
+}
+
+if( n_dd == 4){
+  output <- paste0(dd[c(3,4)],collapse = ' ')
+}
+
+if( n_dd == 5){
+  output <- paste0(dd[c(3,4,5)],collapse = ' ')
+}
+
 
 
 
