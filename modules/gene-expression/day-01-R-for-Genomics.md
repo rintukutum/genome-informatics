@@ -40,7 +40,15 @@ BiocManager::install('airway')
 - overlap with other experimental data, 
 - build reports (using ReportingTools and Glimma). 
 
-```{}
+```{Session 01}
+# Additional topics discussed 
+# - Laptops, Workstations, HPC
+# - conda environment
+# - workflows {[snakemake](https://snakemake.github.io), [NextFlow](https://www.nextflow.io)}
+# - annotations {GENCODE, https://www.gencodegenes.org/mouse/}
+# - GEO HTS data submission
+# - Metafile information
+
 library("tximport")
 library("jsonlite")
 library("readr")
@@ -90,4 +98,4 @@ all(c(TRUE,TRUE))
 - [Airway smooth muscle cells RNAseq](https://bioconductor.org/packages/release/data/experiment/vignettes/airway/inst/doc/airway.html)
 ## about markdown (.md)
 - [Cheat sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
-- [Snakemake - Workflows]()
+- [HPC Tutorials](https://ulhpc-tutorials.readthedocs.io/en/latest/preliminaries/)
