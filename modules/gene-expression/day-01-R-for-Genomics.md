@@ -29,3 +29,6 @@ BiocManager::install('airway')
 ## Additional resources for RNAseq data submission
 
 - [GEO HTS Submission](https://www.ncbi.nlm.nih.gov/geo/info/seq.html)
+
+## about markdown (.md)
+- [Cheat sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
