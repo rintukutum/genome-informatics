@@ -11,9 +11,11 @@ Hello
 ```{R}
 # Install BiocManager
 install.packages("BiocManager")
+
 # Install tximportData for dataset for our exercise
 BiocManager::install("tximportData")
 BiocManager::install("tximport")
+
 # Install TxDb.Hsapiens.UCSC.hg38.knownGene package
 BiocManager::install("TxDb.Hsapiens.UCSC.hg38.knownGene")
 
@@ -22,10 +24,8 @@ install.packages('readr')
 install.packages("jsonlite")
 BiocManager::install('DESeq2')
 BiocManager::install('airway')
-
-
-
-
-
 ```
 
+## Additional resources for RNAseq data submission
+
+- [GEO HTS Submission](https://www.ncbi.nlm.nih.gov/geo/info/seq.html)
