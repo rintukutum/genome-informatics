@@ -10,6 +10,7 @@ Hello
 ## Install
 ```{R}
 # Install BiocManager
+install.packages("BiocManager")
 # Install tximportData for dataset for our exercise
 BiocManager::install("tximportData")
 BiocManager::install("tximport")
