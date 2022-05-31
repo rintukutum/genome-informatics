@@ -44,8 +44,43 @@ BiocManager::install('airway')
 library("tximport")
 library("jsonlite")
 library("readr")
-library("tximportData")
 library("TxDb.Hsapiens.UCSC.hg38.knownGene")
+#----------
+library("tximportData")
+dir <- system.file("extdata", package="tximportData")
+list.files(dir)
+list.files(file.path(dir,"salmon"))
+#----------
+file.path(dir,"samples.txt")
+read.table("/Users/rintukutum/opt/anaconda3/envs/r41/lib/R/library/tximportData/extdata/samples.txt")
+Line1  <- "pop,center,assay,sample,experiment,run"
+Line1
+strsplit(Line1,split = ',')
+samples <- read.table(file.path(dir,"samples.txt"), header=TRUE)
+samples
+samples
+#----------
+file.path(dir, "salmon", samples$run, "quant.sf.gz")
+samples$run
+files <- file.path(dir, "salmon", samples$run, "quant.sf.gz")
+files
+names(files)
+student<- c('a','b')
+student
+names(student) <- c('A','B')
+student['A']
+data.frame(std=student)
+data.frame(S=student)
+data.frame(student)
+#----------
+names(files) <- paste0("sample",1:6)
+#---------- 
+all(file.exists(files))
+files
+any(c(TRUE,FALSE))
+all(c(TRUE,FALSE))
+all(c(TRUE,TRUE))
+
 ```
 
 
@@ -55,3 +90,4 @@ library("TxDb.Hsapiens.UCSC.hg38.knownGene")
 - [Airway smooth muscle cells RNAseq](https://bioconductor.org/packages/release/data/experiment/vignettes/airway/inst/doc/airway.html)
 ## about markdown (.md)
 - [Cheat sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+- [Snakemake - Workflows]()
