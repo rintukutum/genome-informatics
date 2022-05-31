@@ -26,6 +26,29 @@ BiocManager::install('DESeq2')
 BiocManager::install('airway')
 ```
 
+## RNA-seq data analysis with DESeq2 
+- Authors: Michael I. Love, Simon Anders, Wolfgang Huber
+- [Link](https://bioconductor.github.io/BiocWorkshops/rna-seq-data-analysis-with-deseq2.html)
+
+## Flow
+
+- how to quantify transcript expression from FASTQ files using Salmon
+- import quantification from Salmon with tximport and tximeta
+- generate plots for quality control
+- exploratory data analysis EDA (also using MultiQC), 
+- perform differential expression (DE), 
+- overlap with other experimental data, 
+- build reports (using ReportingTools and Glimma). 
+
+```{}
+library("tximport")
+library("jsonlite")
+library("readr")
+library("tximportData")
+library("TxDb.Hsapiens.UCSC.hg38.knownGene")
+```
+
+
 ## Additional resources for RNAseq data submission
 
 - [GEO HTS Submission](https://www.ncbi.nlm.nih.gov/geo/info/seq.html)
