@@ -96,8 +96,8 @@ all(c(TRUE,TRUE))
 
 - [GEO HTS Submission](https://www.ncbi.nlm.nih.gov/geo/info/seq.html)
 - [Airway smooth muscle cells RNAseq](https://bioconductor.org/packages/release/data/experiment/vignettes/airway/inst/doc/airway.html)
-## about markdown (.md)
-- [Cheat sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+## Useful resources
+- [Cheat sheet of Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 - [HPC Tutorials](https://ulhpc-tutorials.readthedocs.io/en/latest/preliminaries/)
 - [Carpentary lessons](https://software-carpentry.org/lessons/)
 - [Carpentary lesson - HPC - Shell](http://www.hpc-carpentry.org/hpc-shell/)
