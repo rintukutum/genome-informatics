@@ -89,6 +89,8 @@ any(c(TRUE,FALSE))
 all(c(TRUE,FALSE))
 all(c(TRUE,TRUE))
 
+
+
 ```
 
 
